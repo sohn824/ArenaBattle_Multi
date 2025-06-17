@@ -1,10 +1,10 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+ï»¿// Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
 
 #include "CoreMinimal.h"
 
-// ÇöÀç ³×Æ®¿öÅ© ¸ğµå¸¦ ¹®ÀÚ¿­·Î ¹İÈ¯
+// í˜„ì¬ ë„¤íŠ¸ì›Œí¬ ëª¨ë“œë¥¼ ë¬¸ìì—´ë¡œ ë°˜í™˜
 #define LOG_NETMODEINFO                                         \
     ((GetNetMode() == ENetMode::NM_Client)                      \
         ? *FString::Printf(TEXT("Client%d"), GPlayInEditorID)   \
@@ -13,7 +13,7 @@
             : TEXT("Server"))
 
 
-// ÀÌ ·Î±×°¡ ¾î¶² ÇÔ¼ö ³»ºÎ¿¡¼­ ÂïÇû´ÂÁö ÅØ½ºÆ®·Î ¹İÈ¯
+// ì´ ë¡œê·¸ê°€ ì–´ë–¤ í•¨ìˆ˜ ë‚´ë¶€ì—ì„œ ì°í˜”ëŠ”ì§€ í…ìŠ¤íŠ¸ë¡œ ë°˜í™˜
 #define LOG_CALLINFO                                            \
     ANSI_TO_TCHAR(__FUNCTION__)
 
@@ -28,5 +28,5 @@
            *FString::Printf(Format, ##__VA_ARGS__))
 
 
-// ±¸ºĞ¿ë ·Î±× Ä«Å×°í¸® ¼±¾ğ
+// êµ¬ë¶„ìš© ë¡œê·¸ ì¹´í…Œê³ ë¦¬ ì„ ì–¸
 DECLARE_LOG_CATEGORY_EXTERN(LogABNetwork, Log, All);

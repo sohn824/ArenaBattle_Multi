@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "Game/ABGameMode.h"
@@ -21,7 +21,7 @@ AABGameMode::AABGameMode()
 		PlayerControllerClass = PlayerControllerClassRef.Class;
 	}
 
-	// »ç¿ëÇÒ GameState ÁöÁ¤
+	// ì‚¬ìš©í•  GameState ì§€ì •
 	GameStateClass = AABGameState::StaticClass();
 }
 
@@ -31,15 +31,15 @@ void AABGameMode::OnPlayerDead()
 }
 
 /**
- * ¼­¹ö¿¡ Á¢¼ÓÇÏ·Á´Â ÇÃ·¹ÀÌ¾î¸¦ ¼ö¶ôÇÏ°Å³ª °ÅºÎÇÔ
- * ErrorMessage¸¦ ºó ¹®ÀÚ¿­ÀÌ ¾Æ´Ñ °ªÀ¸·Î ¼³Á¤ÇÏ¸é ÇØ´ç ÇÃ·¹ÀÌ¾î´Â ·Î±×ÀÎ¿¡ ½ÇÆÐÇÔ
- * PreLoginÀº Loginº¸´Ù ¸ÕÀú È£ÃâµÊ
- * ÀÌÈÄ LoginÀÌ È£ÃâµÇ±â±îÁö »ó´çÇÑ °ÔÀÓ ½Ã°£ÀÌ Èå¸¦ ¼ö ÀÖÀ½
+ * ì„œë²„ì— ì ‘ì†í•˜ë ¤ëŠ” í”Œë ˆì´ì–´ë¥¼ ìˆ˜ë½í•˜ê±°ë‚˜ ê±°ë¶€í•¨
+ * ErrorMessageë¥¼ ë¹ˆ ë¬¸ìžì—´ì´ ì•„ë‹Œ ê°’ìœ¼ë¡œ ì„¤ì •í•˜ë©´ í•´ë‹¹ í”Œë ˆì´ì–´ëŠ” ë¡œê·¸ì¸ì— ì‹¤íŒ¨í•¨
+ * PreLoginì€ Loginë³´ë‹¤ ë¨¼ì € í˜¸ì¶œë¨
+ * ì´í›„ Loginì´ í˜¸ì¶œë˜ê¸°ê¹Œì§€ ìƒë‹¹í•œ ê²Œìž„ ì‹œê°„ì´ íë¥¼ ìˆ˜ ìžˆìŒ
  *
- * @param	Options					ÇÃ·¹ÀÌ¾î°¡ Àü´ÞÇÑ URL ¿É¼Çµé (¿¹: ÀÌ¸§/°üÀüÀÚ ¸ðµå µî)
- * @param	Address					ÇÃ·¹ÀÌ¾îÀÇ ³×Æ®¿öÅ© ÁÖ¼Ò
- * @param	UniqueId				ÇÃ·¹ÀÌ¾î°¡ ¼­¹ö¿¡ Àü´ÞÇÑ °íÀ¯ ID
- * @param	ErrorMessage			ºó ¹®ÀÚ¿­ÀÌ ¾Æ´Ñ °ªÀ¸·Î ¼³Á¤µÇ¸é, ÇØ´ç ¿À·ù ¸Þ½ÃÁö¸¦ »ç¿ëÇØ ÇÃ·¹ÀÌ¾îÀÇ Á¢¼ÓÀ» °ÅºÎ
+ * @param	Options					í”Œë ˆì´ì–´ê°€ ì „ë‹¬í•œ URL ì˜µì…˜ë“¤ (ì˜ˆ: ì´ë¦„/ê´€ì „ìž ëª¨ë“œ ë“±)
+ * @param	Address					í”Œë ˆì´ì–´ì˜ ë„¤íŠ¸ì›Œí¬ ì£¼ì†Œ
+ * @param	UniqueId				í”Œë ˆì´ì–´ê°€ ì„œë²„ì— ì „ë‹¬í•œ ê³ ìœ  ID
+ * @param	ErrorMessage			ë¹ˆ ë¬¸ìžì—´ì´ ì•„ë‹Œ ê°’ìœ¼ë¡œ ì„¤ì •ë˜ë©´, í•´ë‹¹ ì˜¤ë¥˜ ë©”ì‹œì§€ë¥¼ ì‚¬ìš©í•´ í”Œë ˆì´ì–´ì˜ ì ‘ì†ì„ ê±°ë¶€
  */
 void AABGameMode::PreLogin(const FString& Options,
 	const FString& Address, const FUniqueNetIdRepl& UniqueId, FString& ErrorMessage)
@@ -52,23 +52,23 @@ void AABGameMode::PreLogin(const FString& Options,
 }
 
 /**
- * »õ·Î¿î ÇÃ·¹ÀÌ¾îÀÇ ·Î±×ÀÎÀ» Ã³¸®ÇÏ±â À§ÇØ È£ÃâµÇ¸ç, °ÔÀÓ¿¡¼­ overrideÇÒ ¼ö ÀÖÀ½
+ * ìƒˆë¡œìš´ í”Œë ˆì´ì–´ì˜ ë¡œê·¸ì¸ì„ ì²˜ë¦¬í•˜ê¸° ìœ„í•´ í˜¸ì¶œë˜ë©°, ê²Œìž„ì—ì„œ overrideí•  ìˆ˜ ìžˆìŒ
  *
- * ÇÃ·¹ÀÌ¾îÀÇ ±âº» ¼Ó¼º(ÀÌ¸§, °íÀ¯ ID, ¹é¿£µå µî·Ï µî)À» ¼³Á¤ÇÏ¸ç, º¹ÀâÇÑ °ÔÀÓ ·ÎÁ÷À» ¼öÇàÇØ¼­´Â ¾È µÊ
- * ÀÌ ÇÔ¼ö ³»¿¡¼­´Â ³×Æ®¿öÅ© °üÁ¡¿¡¼­ PlayerController°¡ ¿ÏÀüÈ÷ ÃÊ±âÈ­µÇÁö ¾ÊÀº »óÅÂÀÓ
- * ½ÇÁ¦ °ÔÀÓ ·ÎÁ÷Àº ÀÌÈÄ¿¡ È£ÃâµÇ´Â PostLogin¿¡¼­ Ã³¸®ÇØ¾ß ÇÔ
+ * í”Œë ˆì´ì–´ì˜ ê¸°ë³¸ ì†ì„±(ì´ë¦„, ê³ ìœ  ID, ë°±ì—”ë“œ ë“±ë¡ ë“±)ì„ ì„¤ì •í•˜ë©°, ë³µìž¡í•œ ê²Œìž„ ë¡œì§ì„ ìˆ˜í–‰í•´ì„œëŠ” ì•ˆ ë¨
+ * ì´ í•¨ìˆ˜ ë‚´ì—ì„œëŠ” ë„¤íŠ¸ì›Œí¬ ê´€ì ì—ì„œ PlayerControllerê°€ ì™„ì „ížˆ ì´ˆê¸°í™”ë˜ì§€ ì•Šì€ ìƒíƒœìž„
+ * ì‹¤ì œ ê²Œìž„ ë¡œì§ì€ ì´í›„ì— í˜¸ì¶œë˜ëŠ” PostLoginì—ì„œ ì²˜ë¦¬í•´ì•¼ í•¨
  *
- * @param NewPlayer ÀÌ ÇÃ·¹ÀÌ¾î¸¦ ³ªÅ¸³»´Â UPlayer °´Ã¼¿¡ ´ëÇÑ Æ÷ÀÎÅÍ (·ÎÄÃ ¶Ç´Â ¿ø°Ý)
- * @param RemoteRole ÀÌ ÄÁÆ®·Ñ·¯°¡ °¡Áö´Â ¿ø°Ý ¿ªÇÒ
- * @param Portal Å¬¶óÀÌ¾ðÆ®°¡ ÁöÁ¤ÇÑ Æ÷Å» À§Ä¡
- * @param Options Å¬¶óÀÌ¾ðÆ®°¡ ·Î±×ÀÎ ½Ã Àü´ÞÇÑ °ÔÀÓ ¿É¼Çµé
- * @param UniqueId ·Î±×ÀÎÇÏ´Â ÇÃ·¹ÀÌ¾îÀÇ ÇÃ·§Æû °íÀ¯ ½Äº°ÀÚ
- * @param ErrorMessage [Ãâ·Â] ·Î±×ÀÎ ½ÇÆÐ ½Ã »çÀ¯°¡ µÇ´Â ¿À·ù ¸Þ½ÃÁö
+ * @param NewPlayer ì´ í”Œë ˆì´ì–´ë¥¼ ë‚˜íƒ€ë‚´ëŠ” UPlayer ê°ì²´ì— ëŒ€í•œ í¬ì¸í„° (ë¡œì»¬ ë˜ëŠ” ì›ê²©)
+ * @param RemoteRole ì´ ì»¨íŠ¸ë¡¤ëŸ¬ê°€ ê°€ì§€ëŠ” ì›ê²© ì—­í• 
+ * @param Portal í´ë¼ì´ì–¸íŠ¸ê°€ ì§€ì •í•œ í¬íƒˆ ìœ„ì¹˜
+ * @param Options í´ë¼ì´ì–¸íŠ¸ê°€ ë¡œê·¸ì¸ ì‹œ ì „ë‹¬í•œ ê²Œìž„ ì˜µì…˜ë“¤
+ * @param UniqueId ë¡œê·¸ì¸í•˜ëŠ” í”Œë ˆì´ì–´ì˜ í”Œëž«í¼ ê³ ìœ  ì‹ë³„ìž
+ * @param ErrorMessage [ì¶œë ¥] ë¡œê·¸ì¸ ì‹¤íŒ¨ ì‹œ ì‚¬ìœ ê°€ ë˜ëŠ” ì˜¤ë¥˜ ë©”ì‹œì§€
  *
- * ·Î±×ÀÎÀÌ ¼º°øÇÏ¸é, ÀÌ ÇÃ·¹ÀÌ¾î¿Í ¿¬°áÇÒ »õ·Î¿î PlayerController¸¦ ¹ÝÈ¯ÇÔ
- * ErrorMessage ¹®ÀÚ¿­ÀÌ ¼³Á¤µÇ¸é ·Î±×ÀÎÀÌ ½ÇÆÐÇÔ
+ * ë¡œê·¸ì¸ì´ ì„±ê³µí•˜ë©´, ì´ í”Œë ˆì´ì–´ì™€ ì—°ê²°í•  ìƒˆë¡œìš´ PlayerControllerë¥¼ ë°˜í™˜í•¨
+ * ErrorMessage ë¬¸ìžì—´ì´ ì„¤ì •ë˜ë©´ ë¡œê·¸ì¸ì´ ì‹¤íŒ¨í•¨
  *
- * @return ·Î±×ÀÎÇÑ ÇÃ·¹ÀÌ¾î¸¦ À§ÇÑ »õ·Î¿î PlayerController, ½ÇÆÐÇÑ °æ¿ì NULL ¹ÝÈ¯
+ * @return ë¡œê·¸ì¸í•œ í”Œë ˆì´ì–´ë¥¼ ìœ„í•œ ìƒˆë¡œìš´ PlayerController, ì‹¤íŒ¨í•œ ê²½ìš° NULL ë°˜í™˜
  */
 APlayerController* AABGameMode::Login(UPlayer* NewPlayer,
 	ENetRole InRemoteRole, const FString& Portal, const FString& Options,
@@ -84,8 +84,8 @@ APlayerController* AABGameMode::Login(UPlayer* NewPlayer,
 }
 
 /**
- * ·Î±×ÀÎ¿¡ ¼º°øÇÑ ÈÄ È£ÃâµÊ
- * ÀÌ ½ÃÁ¡ºÎÅÍ PlayerController¿¡¼­ º¹Á¦(replicated) ÇÔ¼ö¸¦ ¾ÈÀüÇÏ°Ô È£ÃâÇÒ ¼ö ÀÖÀ½
+ * ë¡œê·¸ì¸ì— ì„±ê³µí•œ í›„ í˜¸ì¶œë¨
+ * ì´ ì‹œì ë¶€í„° PlayerControllerì—ì„œ ë³µì œ(replicated) í•¨ìˆ˜ë¥¼ ì•ˆì „í•˜ê²Œ í˜¸ì¶œí•  ìˆ˜ ìžˆìŒ
  */
 void AABGameMode::PostLogin(APlayerController* NewPlayer)
 {
@@ -97,7 +97,7 @@ void AABGameMode::PostLogin(APlayerController* NewPlayer)
 }
 
 /**
- * ÀÌ ÄÝ¹éÀÌ È£ÃâµÈ ÈÄ ¾×ÅÍµé¿¡ ´ëÇØ BeginPlay¸¦ È£ÃâÇÏ´Â ´Ü°è·Î ÀüÈ¯µÊ
+ * ì´ ì½œë°±ì´ í˜¸ì¶œëœ í›„ ì•¡í„°ë“¤ì— ëŒ€í•´ BeginPlayë¥¼ í˜¸ì¶œí•˜ëŠ” ë‹¨ê³„ë¡œ ì „í™˜ë¨
  */
 void AABGameMode::StartPlay()
 {
