@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "Player/ABPlayerController.h"
 #include "UI/ABHUDWidget.h"
 #include "Kismet/GameplayStatics.h"
 #include "ABSaveGame.h"
+#include "ArenaBattle.h"
 
 DEFINE_LOG_CATEGORY(LogABPlayerController);
 
@@ -19,7 +19,11 @@ AABPlayerController::AABPlayerController()
 
 void AABPlayerController::BeginPlay()
 {
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Start"));
+
 	Super::BeginPlay();
+
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
 
 	FInputModeGameOnly GameOnlyInputMode;
 	SetInputMode(GameOnlyInputMode);
